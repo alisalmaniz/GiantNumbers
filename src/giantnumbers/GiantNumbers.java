@@ -5,6 +5,8 @@
  */
 package giantnumbers;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Ali salmani
@@ -16,11 +18,15 @@ public class GiantNumbers {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Store store = new Store();
         
-        Sum sum=new Sum(store.set1(), store.set2());
-                
-        sum.sumAndPrint();
+        
+       Menu menu = new Menu();
+       
+       int selection = menu.showMenu();
+       
+       menu.operation(selection);
+        
+        
     }
     
 }

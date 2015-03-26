@@ -91,5 +91,46 @@ public class Sum {
 
         System.out.println();
     }
+
+    public LinkedList getLink1() {
+        return link1;
+    }
+
+    public void setLink1(LinkedList link1) {
+        this.link1 = link1;
+    }
+
+    public LinkedList getLink2() {
+        return link2;
+    }
+
+    public void setLink2(LinkedList link2) {
+        this.link2 = link2;
+    }
+
+    public int getSize1() {
+        return size1;
+    }
+
+    public void setSize1(int size1) {
+        this.size1 = size1;
+    }
+    
+    public int getSize2() {
+        return size2;
+    }
+
+    public void setSize2(int size2) {
+        this.size2 = size2;
+    }
+
+    public int getTemp() {
+        return temp;
+    }
+
+    public void setTemp(int temp) {
+        this.temp = temp;
+    }
+    
     
 }
