@@ -19,12 +19,12 @@ public class GiantNumbers {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        
-       Menu menu = new Menu();
+        Store store = new Store();
+        Menu menu=new Menu(store.set1(), store.set2());
        
-       int selection = menu.showMenu();
+        int selection = menu.showMenu();
        
-       menu.operation(selection);
+        menu.operation(selection);
         
         
     }

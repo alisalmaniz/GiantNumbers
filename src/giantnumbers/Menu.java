@@ -5,6 +5,7 @@
  */
 package giantnumbers;
 
+import java.util.LinkedList;
 import java.util.Scanner;
 import javax.swing.JOptionPane;
 
@@ -15,7 +16,27 @@ import javax.swing.JOptionPane;
 public class Menu {
     
     
+    private LinkedList link1;
+    private LinkedList link2;
+    
+    public Menu(LinkedList link1, LinkedList link2){
+
+        this.link1=link1;
+        this.link2=link2;
+            
+    }
+ /*   
+    public void showNumbers(){
+        
+        for(int i=0; i<link1.size() ;i++)
+            System.out.print(link1.get(i));
+        
+        
+        
+    }
+*/    
     public int showMenu(){
+        
         
         String s = JOptionPane.showInputDialog(  "Enter the number of Operation you want:\n"
                                                     + "1.Sum\n"
@@ -27,17 +48,6 @@ public class Menu {
         
         int selection = Integer.parseInt(s);
         
-/*        System.out.println("Enter the number of Operation you want");
-        System.out.println("1.Sum");
-        System.out.println("2.Subtract");
-        System.out.println("3.Multiplication");
-        System.out.println("4.Compare");
-        System.out.println("5.Is zero");
-        System.out.println("6.Exite");
-        
-        Scanner in =new Scanner(System.in);
-        int selection= in.nextInt();
- */       
         return selection;
     }
     
@@ -45,8 +55,7 @@ public class Menu {
         
         if(selection == 1){
             
-            Store store = new Store();
-            Sum sum=new Sum(store.set1(), store.set2());
+            Sum sum=new Sum(link1, link2);
             sum.sumAndPrint();
         }
         else if(selection == 2){
@@ -60,14 +69,12 @@ public class Menu {
 
             if(selection2==1){
                 
-                Store store = new Store();
-                Subtract subtract =new Subtract(store.set1(), store.set2());
+                Subtract subtract =new Subtract(link1, link2);
                 subtract.subAndPrint(1);
             }
             else if(selection2==2){
                 
-                Store store = new Store();
-                Subtract subtract =new Subtract(store.set1(), store.set2());
+                Subtract subtract =new Subtract(link1, link2);
                 subtract.subAndPrint(2);
             }   
             else if(selection2==3){
@@ -80,8 +87,40 @@ public class Menu {
             
             
         }
+        else if(selection==4){
             
+            Status status = new Status(link1, link2);
+            status.compare();
+        }
+        else if(selection==5){
+            
+            Status status = new Status(link1, link2);
+            status.isZero();
+        }
+        else if(selection==6){
+            
+            System.exit(0);
+        }   
+        else
+            this.showMenu();
         
+        int sel = this.showMenu();
+        this.operation(sel);
     }
-    
+
+    public void setLink1(LinkedList link1) {
+        this.link1 = link1;
+    }
+
+    public LinkedList getLink1() {
+        return link1;
+    }
+
+    public void setLink2(LinkedList link2) {
+        this.link2 = link2;
+    }
+
+    public LinkedList getLink2() {
+        return link2;
+    }
 }
