@@ -38,13 +38,18 @@ public class Menu {
     public int showMenu(){
         
         
-        String s = JOptionPane.showInputDialog(  "Enter the number of Operation you want:\n"
-                                                    + "1.Sum\n"
-                                                    + "2.Subtract\n"
-                                                    + "3.Multiplication\n"
-                                                    + "4.Compare\n"
-                                                    + "5.Is zero\n"
-                                                    + "6.Exite");
+        String s = JOptionPane.showInputDialog(   "Enter the number of Operation you want:\n"
+                                                + "1.Sum\n"
+                                                + "2.Subtract\n"
+                                                + "3.Multiplication\n"
+                                                + "4.Is zero\n"
+                                                + "5.Less\n"
+                                                + "6.Greater\n"
+                                                + "7.Equal\n"
+                                                + "8.Unequal\n"
+                                                + "9.Less than or equal\n"
+                                                + "10.Greater than or equal\n"
+                                                + "11.Exite");
         
         int selection = Integer.parseInt(s);
         
@@ -85,19 +90,45 @@ public class Menu {
         }
         else if(selection==3){
             
-            
+            Status status = new Status(link1, link2);
+            status.multiplication();
         }
         else if(selection==4){
             
             Status status = new Status(link1, link2);
-            status.compare();
+            status.isZero();
         }
         else if(selection==5){
             
             Status status = new Status(link1, link2);
-            status.isZero();
+            status.less();
         }
         else if(selection==6){
+            
+            Status status = new Status(link1, link2);
+            status.greater();
+        }
+        else if(selection==7){
+            
+            Status status = new Status(link1, link2);
+            status.equal();
+        }
+        else if(selection==8){
+            
+            Status status = new Status(link1, link2);
+            status.unequal();
+        }
+        else if(selection==9){
+            
+            Status status = new Status(link1, link2);
+            status.lessThanOrEqual();
+        }
+        else if(selection==10){
+            
+            Status status = new Status(link1, link2);
+            status.greaterThanOrEqual();
+        }
+        else if(selection==11){
             
             System.exit(0);
         }   

@@ -27,8 +27,11 @@ public class Status {
         sign2= (int) link2.getLast();
     }
     
+    public void multiplication(){
+        
+    }
     
-    public void compare(){
+    public void greater(){
         
         int j=0;
         if(sign1==0 && sign2==1)
@@ -57,7 +60,7 @@ public class Status {
                     }
                 } 
                 if(j==0)
-                    JOptionPane.showMessageDialog(null, "The numbers are equal.");
+                    JOptionPane.showMessageDialog(null, "No.");
             }
         }
         
@@ -82,13 +85,316 @@ public class Status {
                     }
                 } 
                 if(j==0)
-                    JOptionPane.showMessageDialog(null, "The numbers are equal.");
+                    JOptionPane.showMessageDialog(null, "No.");
             }
         }
             
         
     }
 
+    public void less(){
+        
+        int j=0;
+        if(sign1==0 && sign2==1)
+            JOptionPane.showMessageDialog(null, "The second number is less than first number.");
+        
+        else if(sign1==1 && sign2==0)
+            JOptionPane.showMessageDialog(null, "The first number is less than second number.");
+        
+        else if(sign1==1 && sign2==1){
+            if(link1.size() > link2.size())
+                JOptionPane.showMessageDialog(null, "The first number is less than second number.");
+            else if(link1.size() < link2.size())
+              JOptionPane.showMessageDialog(null, "The second number is less than first number.");
+            else{
+                for(int i=0; i<link1.size()-1; i++){
+
+                    if((int)link1.get(i) > (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "The first number is less than second number.");
+                        j++;
+                        break;
+                    }
+                    else if((int)link1.get(i) < (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "The second number is less than first number.");
+                        j++;
+                        break;
+                    }
+                } 
+                if(j==0)
+                    JOptionPane.showMessageDialog(null, "No.");
+            }
+        }
+        
+        else if(sign1==0 && sign2==0){
+            j=0;
+            if(link1.size() < link2.size())
+                JOptionPane.showMessageDialog(null, "The first number is less than second number.");
+            else if(link1.size() > link2.size())
+              JOptionPane.showMessageDialog(null, "The second number is less than first number.");
+            else{
+                for(int i=0; i<link1.size()-1; i++){
+
+                    if((int)link1.get(i) < (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "The first number is less than second number.");
+                        j++;
+                        break;
+                    }
+                    else if((int)link1.get(i) > (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "The second number is less than first number.");
+                        j++;
+                        break;
+                    }
+                } 
+                if(j==0)
+                    JOptionPane.showMessageDialog(null, "No.");
+            }
+        }
+    }
+    
+    public void equal(){
+        
+        int j=0;
+        if(sign1==0 && sign2==1)
+            JOptionPane.showMessageDialog(null, "No.");
+        
+        else if(sign1==1 && sign2==0)
+            JOptionPane.showMessageDialog(null, "No.");
+        
+        else if(sign1==1 && sign2==1){
+            if(link1.size() > link2.size())
+                JOptionPane.showMessageDialog(null, "No.");
+            else if(link1.size() < link2.size())
+              JOptionPane.showMessageDialog(null, "No.");
+            else{
+                for(int i=0; i<link1.size()-1; i++){
+
+                    if((int)link1.get(i) > (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "No.");
+                        j++;
+                        break;
+                    }
+                    else if((int)link1.get(i) < (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "No.");
+                        j++;
+                        break;
+                    }
+                } 
+                if(j==0)
+                    JOptionPane.showMessageDialog(null, "The numbers are equal.");
+            }
+        }
+        
+        else if(sign1==0 && sign2==0){
+            j=0;
+            if(link1.size() < link2.size())
+                JOptionPane.showMessageDialog(null, "No.");
+            else if(link1.size() > link2.size())
+              JOptionPane.showMessageDialog(null, "No.");
+            else{
+                for(int i=0; i<link1.size()-1; i++){
+
+                    if((int)link1.get(i) < (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "No.");
+                        j++;
+                        break;
+                    }
+                    else if((int)link1.get(i) > (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "No.");
+                        j++;
+                        break;
+                    }
+                } 
+                if(j==0)
+                    JOptionPane.showMessageDialog(null, "The numbers are equal.");
+            }
+        }
+    }
+    
+    public void unequal(){
+        
+        int j=0;
+        if(sign1==0 && sign2==1)
+            JOptionPane.showMessageDialog(null, "The numbers are unequal.");
+        
+        else if(sign1==1 && sign2==0)
+            JOptionPane.showMessageDialog(null, "The numbers are unequal.");
+        
+        else if(sign1==1 && sign2==1){
+            if(link1.size() > link2.size())
+                JOptionPane.showMessageDialog(null, "The numbers are unequal.");
+            else if(link1.size() < link2.size())
+              JOptionPane.showMessageDialog(null, "The numbers are unequal.");
+            else{
+                for(int i=0; i<link1.size()-1; i++){
+
+                    if((int)link1.get(i) > (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "The numbers are unequal.");
+                        j++;
+                        break;
+                    }
+                    else if((int)link1.get(i) < (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "The numbers are unequal.");
+                        j++;
+                        break;
+                    }
+                } 
+                if(j==0)
+                    JOptionPane.showMessageDialog(null, "No.");
+            }
+        }
+        
+        else if(sign1==0 && sign2==0){
+            j=0;
+            if(link1.size() < link2.size())
+                JOptionPane.showMessageDialog(null, "The numbers are unequal.");
+            else if(link1.size() > link2.size())
+              JOptionPane.showMessageDialog(null, "The numbers are unequal.");
+            else{
+                for(int i=0; i<link1.size()-1; i++){
+
+                    if((int)link1.get(i) < (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "The numbers are unequal.");
+                        j++;
+                        break;
+                    }
+                    else if((int)link1.get(i) > (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "The numbers are unequal.");
+                        j++;
+                        break;
+                    }
+                } 
+                if(j==0)
+                    JOptionPane.showMessageDialog(null, "No.");
+            }
+        }
+    }
+    
+    public void lessThanOrEqual(){
+        
+       int j=0;
+        if(sign1==0 && sign2==1)
+            JOptionPane.showMessageDialog(null, "The second number is less than or equal first number.");
+        
+        else if(sign1==1 && sign2==0)
+            JOptionPane.showMessageDialog(null, "The first number is less than or equal second number.");
+        
+        else if(sign1==1 && sign2==1){
+            if(link1.size() > link2.size())
+                JOptionPane.showMessageDialog(null, "The first number is less than or equal second number.");
+            else if(link1.size() < link2.size())
+              JOptionPane.showMessageDialog(null, "The second number is less than or equal first number.");
+            else{
+                for(int i=0; i<link1.size()-1; i++){
+
+                    if((int)link1.get(i) > (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "The first number is less than or equal second number.");
+                        j++;
+                        break;
+                    }
+                    else if((int)link1.get(i) < (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "The second number is less than or equal first number.");
+                        j++;
+                        break;
+                    }
+                } 
+                if(j==0)
+                    JOptionPane.showMessageDialog(null,   "The second number is less than or equal first number.\n"
+                                                        + "or\n"
+                                                        + "The second number is less than or equal first number.");
+            }
+        }
+        
+        else if(sign1==0 && sign2==0){
+            j=0;
+            if(link1.size() < link2.size())
+                JOptionPane.showMessageDialog(null, "The first number is less than or equal second number.");
+            else if(link1.size() > link2.size())
+              JOptionPane.showMessageDialog(null, "The second number is less than or equal first number.");
+            else{
+                for(int i=0; i<link1.size()-1; i++){
+
+                    if((int)link1.get(i) < (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "The first number is less than or equal second number.");
+                        j++;
+                        break;
+                    }
+                    else if((int)link1.get(i) > (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "The second number is less than or equal first number.");
+                        j++;
+                        break;
+                    }
+                } 
+                if(j==0)
+                    JOptionPane.showMessageDialog(null,   "The second number is less than or equal first number.\n"
+                                                        + "or\n"
+                                                        + "The second number is less than or equal first number.");
+            }
+        }
+    }
+    
+    public void greaterThanOrEqual(){
+        
+        int j=0;
+        if(sign1==0 && sign2==1)
+            JOptionPane.showMessageDialog(null, "The first number is Greater than or equal second number.");
+        
+        else if(sign1==1 && sign2==0)
+            JOptionPane.showMessageDialog(null, "The second number is Greater than or equal first number.");
+        
+        else if(sign1==1 && sign2==1){
+            if(link1.size() > link2.size())
+                JOptionPane.showMessageDialog(null, "The second number is Greater than or equal first number.");
+            else if(link1.size() < link2.size())
+              JOptionPane.showMessageDialog(null, "The first number is Greater than or equal second number.");
+            else{
+                for(int i=0; i<link1.size()-1; i++){
+
+                    if((int)link1.get(i) > (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "The second number is Greater than or equal first number.");
+                        j++;
+                        break;
+                    }
+                    else if((int)link1.get(i) < (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "The first number is Greater than or equal second number.");
+                        j++;
+                        break;
+                    }
+                } 
+                if(j==0)
+                    JOptionPane.showMessageDialog(null,   "The second number is Greater than or equal first number.\n"
+                                                        + "or\n"
+                                                        + "The second number is Greater than or equal first number.");
+            }
+        }
+        
+        else if(sign1==0 && sign2==0){
+            j=0;
+            if(link1.size() < link2.size())
+                JOptionPane.showMessageDialog(null, "The second number is Greater than or equal first number.");
+            else if(link1.size() > link2.size())
+              JOptionPane.showMessageDialog(null, "The first number is Greater than or equal second number.");
+            else{
+                for(int i=0; i<link1.size()-1; i++){
+
+                    if((int)link1.get(i) < (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "The second number is Greater than or equal first number.");
+                        j++;
+                        break;
+                    }
+                    else if((int)link1.get(i) > (int)link2.get(i)){
+                        JOptionPane.showMessageDialog(null, "The first number is Greater than or equal second number.");
+                        j++;
+                        break;
+                    }
+                } 
+                if(j==0)
+                    JOptionPane.showMessageDialog(null,   "The second number is Greater than or equal first number.\n"
+                                                        + "or\n"
+                                                        + "The second number is Greater than or equal first number.");
+            }
+        }
+    }
+    
     public void isZero(){
         
         int j=0;
@@ -96,7 +402,7 @@ public class Status {
         for(int i=0; i<link1.size()-1; i++){
             
             if((int)link1.get(i)!=0)
-                j++;System.out.println("");
+                j++;
         }
         int j2=0;
 
