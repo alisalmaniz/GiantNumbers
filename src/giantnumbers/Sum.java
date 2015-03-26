@@ -77,6 +77,7 @@ public class Sum {
             }
           
         }
+        JOptionPane.showMessageDialog(null, "It written in consul");
         
         if((int)link3.get(0)==0)
             i=1;
