@@ -90,8 +90,8 @@ public class Menu {
         }
         else if(selection==3){
             
-            Status status = new Status(link1, link2);
-            status.multiplication();
+            Multiplication multiplication = new Multiplication(link1, link2);
+            multiplication.multiplicationAndPrint();
         }
         else if(selection==4){
             

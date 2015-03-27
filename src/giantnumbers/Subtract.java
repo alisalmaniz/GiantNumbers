@@ -6,6 +6,7 @@
 package giantnumbers;
 
 import java.util.LinkedList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -59,7 +60,7 @@ public class Subtract {
             b =(sign2==1 ? -1 : 1) * (size2>1 ? (int) link2.get(size2-2) : 0 );
             
             link3.addFirst((b+a+temp)%10);
-            temp=(b+a)/10;
+            temp=(b+a+temp)/10;
             
             size1--;
             size2--;
@@ -85,6 +86,7 @@ public class Subtract {
             }
           
         }
+        JOptionPane.showMessageDialog(null, "It will write in consul");
         
         if((int)link3.get(0)==0)
             i=1;

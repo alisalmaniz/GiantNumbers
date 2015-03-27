@@ -27,9 +27,6 @@ public class Status {
         sign2= (int) link2.getLast();
     }
     
-    public void multiplication(){
-        
-    }
     
     public void greater(){
         

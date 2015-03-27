@@ -51,7 +51,7 @@ public class Sum {
             b =(sign2==1 ? -1 : 1) * (size2>1 ? (int) link2.get(size2-2) : 0 );
             
             link3.addFirst((b+a+temp)%10);
-            temp=(b+a)/10;
+            temp=(b+a+temp)/10;
             
             size1--;
             size2--;
@@ -77,14 +77,14 @@ public class Sum {
             }
           
         }
-        JOptionPane.showMessageDialog(null, "It written in consul");
+        JOptionPane.showMessageDialog(null, "It will write in consul");
         
         if((int)link3.get(0)==0)
             i=1;
         else
             i=0;
             
-        if((int)link3.get(1)<0)
+        if((int)link3.get(link3.size()-1)<0)
             System.out.print("-");
             
         for(; i<link3.size() ;i++)
