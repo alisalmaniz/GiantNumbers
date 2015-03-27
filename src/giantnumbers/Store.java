@@ -27,8 +27,9 @@ public class Store {
         sign1=0;
         sign2=0;  
         
-        num1 =  JOptionPane.showInputDialog("Enter first number");
-        num2 =  JOptionPane.showInputDialog("Enter second number");
+        //the numbers can hava more than 40 elements (unlimited).
+        num1 =  JOptionPane.showInputDialog("Enter first number(No restrictions)");
+        num2 =  JOptionPane.showInputDialog("Enter second number(No restrictions)");
     }
     
     
