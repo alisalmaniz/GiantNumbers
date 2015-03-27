@@ -39,18 +39,17 @@ public class Multiplication {
             n=0;
             for(int j=0; j<=k ; j++){
                 n+=(int)link1.get(link1.size()-2-j+link2.size()-2-Math.max(i,link2.size()-2)) * (int)link2.get(link2.size()-2-k+j);
-                System.out.println("**"+n+"**"+i);
             }
             link3.addFirst((n+temp)%10);
             temp=(n+temp)/10;   
         }
-        System.out.println("");
+        //i divide the steps into to parts.
         for(int i=1; i<link2.size()-1; i++){
             k=Math.min(link1.size()-2, link2.size()-2-i);
             n=0;
             for(int j=0; j<=k ; j++){
                 n+=(int)link1.get(j) * (int)link2.get(link2.size()-2-i-j);
-            System.out.println("**"+ n+"**"+i);
+
             }
             link3.addFirst((n+temp)%10);
             temp=(n+temp)/10;      

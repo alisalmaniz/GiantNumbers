@@ -33,12 +33,13 @@ public class Store {
     
     
     public LinkedList set1 (){
+        // set every element of number1 to one cell of linklist1 (link1).
    
         LinkedList link1 = new LinkedList();
         
         if(num1.charAt(0)== '-')
             sign1=1;
-
+        // it will add to end of list to show that this number is negative or positive.
         
         for( i=sign1 ; i < num1.length() ; i++){
             
@@ -48,17 +49,19 @@ public class Store {
         }
         
         link1.add(sign1);
-             //   JOptionPane.showMessageDialog(null, link1);
+         
         return link1;   
     }
     
     public LinkedList set2 (){
-   
+        // set every element of number2 to one cell of linklist2 (link2).
+        
         LinkedList link2 = new LinkedList();
             
         if(num2.charAt(0)== '-')
             sign2=1;
-
+        // it will add to end of list to show that this number is negative or positive.
+        
         for( i=sign2 ; i < num2.length() ; i++){
             
             c=num2.charAt(i);
@@ -67,7 +70,7 @@ public class Store {
         }
         
         link2.add(sign2);
-               //     JOptionPane.showMessageDialog(null, link2);
+        
         return link2;
     }
 

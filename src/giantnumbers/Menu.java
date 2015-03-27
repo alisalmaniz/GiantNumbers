@@ -6,7 +6,6 @@
 package giantnumbers;
 
 import java.util.LinkedList;
-import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 /**

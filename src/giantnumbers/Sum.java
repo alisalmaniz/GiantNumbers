@@ -43,27 +43,32 @@ public class Sum {
         else
             i=size2;
         
+        //the following is a special way to sum
+        
+        
         int a=0;
         int b=0;
         for(;i>1 ;i--){
             
             a =(sign1==1 ? -1 : 1) * (size1>1 ? (int) link1.get(size1-2) : 0 );
             b =(sign2==1 ? -1 : 1) * (size2>1 ? (int) link2.get(size2-2) : 0 );
+            //every element of a positive number will be positive and
+            //every element of a negative number will be negative.
             
             link3.addFirst((b+a+temp)%10);
             temp=(b+a+temp)/10;
             
             size1--;
             size2--;
-          //  JOptionPane.showMessageDialog(null, "ok");
-           // JOptionPane.showMessageDialog(null, a);
-           // JOptionPane.showMessageDialog(null, b);
+
         }
         if(temp!=0)
             link3.addFirst(temp);
         
+        //now the elements of a list are positive and negative
+        //every element has 10 times greater than his right element
+        
         int c=0;
-      //    System.out.print("ok");
         
         for( i=0; i<link3.size()-1; i++){
             
@@ -77,6 +82,8 @@ public class Sum {
             }
           
         }
+        //the following print the number 
+        
         JOptionPane.showMessageDialog(null, "It will write in consul");
         
         if((int)link3.get(0)==0)
