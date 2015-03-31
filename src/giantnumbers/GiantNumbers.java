@@ -17,7 +17,7 @@ public class GiantNumbers {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // TODO code application logic here 
         
         Store store = new Store();
         Menu menu=new Menu(store.set1(), store.set2());
